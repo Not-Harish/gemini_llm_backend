@@ -132,5 +132,3 @@ class AgeBasedChatbot:
             "age": self.age,
             "suggested_topics": self.topics
         }
-obj=AgeBasedChatbot(25,"AIzaSyC7Vhu1MVBdg13Rjib8I4K7JBnA6aaw52M")
-obj.chat("explain about ai")
