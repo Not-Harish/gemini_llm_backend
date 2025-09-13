@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from ai_chat import AgeBasedChatbot
+from fastapi.middleware.cors import CORSMiddleware
+
+
+
 
 # -------------------------------
 # Config
@@ -15,6 +19,13 @@ bot = AgeBasedChatbot(age=FIXED_AGE, api_key=API_KEY)
 # -------------------------------
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 👈 You can restrict to ["http://localhost:3000"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 class ChatRequest(BaseModel):
     message: str
 
