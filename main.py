@@ -6,7 +6,7 @@ from ai_chat import AgeBasedChatbot
 # Config
 # -------------------------------
 FIXED_AGE = 20  # Temporary age until ML model sends real one
-API_KEY = "AIzaSyC7Vhu1MVBdg13Rjib8I4K7JBnA6aaw52M"
+API_KEY = ""
 
 bot = AgeBasedChatbot(age=FIXED_AGE, api_key=API_KEY)
 
